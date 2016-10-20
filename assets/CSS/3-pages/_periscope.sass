@@ -1,0 +1,58 @@
+.periscope
+	article
+		text-align: center
+		padding: 0
+		max-width: 640px
+		margin: 0 auto
+
+.large-window
+	+size(640px)
+	border-radius: 50%
+	position: relative
+	background:
+		image: url("/assets/img/model2.jpg")
+		position: center 0px
+		size: 55%
+		// repeat: no-repeat
+		attachment: fixed
+
+	.window-tint
+		background-color: $PeriscopeBack
+		+position(absolute, 0 0 0 0)
+		border-radius: 50%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+
+	.promo-text
+		color: $StandardWhite
+		font-weight: 100
+		font-size: 50px
+		line-height: 1.2
+
+		strong
+			display: block
+			font-size: 30px
+
+			span
+				font:
+					weight: 300
+					size: 18px
+					style: italic
+				color: $PeriscopeFront
+
+		.window-cta
+			font-size: 20px
+			text-decoration: none
+			color: $StandardWhite
+			border: 1px solid $StandardWhite
+			padding: 10px 20px
+			transition: all 0.15s ease-in-out
+
+			&:hover
+				background-color: $StandardWhite
+				color: black
